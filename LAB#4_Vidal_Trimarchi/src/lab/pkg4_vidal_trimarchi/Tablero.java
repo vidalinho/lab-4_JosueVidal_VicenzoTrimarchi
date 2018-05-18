@@ -58,13 +58,7 @@ public class Tablero {
         tablero[0][5] = "m";
         tablero[9][4] = "M";
 
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero.length; j++) {
-                System.out.print(tablero[i][j]);
-            }
-            System.out.println("");
-        }
-
+    
     }
 
     public Tablero(String[][] tablero) {
