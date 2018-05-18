@@ -5,6 +5,7 @@
  */
 package lab.pkg4_vidal_trimarchi;
 
+import java.awt.Color;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -104,6 +105,19 @@ public class LAB4_Vidal_Trimarchi {
                 System.out.print(tablero[i][j]);
             }
             System.out.println("");
+
+        }
+    }
+
+    static void validar(int i) throws Ex {
+        if (i < 0 || i > 10) {
+            throw new Ex(Color.YELLOW, "Error,tiene que estar entre 0 y 9");
+        }
+    }
+
+    static void validar2(int j) throws Ex {
+        if (j < 0 || j > 10) {
+            throw new Ex(Color.YELLOW, "Error,tiene que estar entre 0 y 9");
         }
     }
 
