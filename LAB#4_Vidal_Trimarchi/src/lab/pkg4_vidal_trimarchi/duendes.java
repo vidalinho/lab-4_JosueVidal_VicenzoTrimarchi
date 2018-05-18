@@ -12,7 +12,13 @@ package lab.pkg4_vidal_trimarchi;
 public class duendes extends Piezas{
 
  public boolean Movimiento(int i,int j,int i2,int j2) {
-        return false;
+     boolean bresp=false;
+     if((i+1==i2&&j==j2)){
+         bresp=true;
+     }else{
+         bresp=false;
+     }
+        return bresp;
         
     }
  

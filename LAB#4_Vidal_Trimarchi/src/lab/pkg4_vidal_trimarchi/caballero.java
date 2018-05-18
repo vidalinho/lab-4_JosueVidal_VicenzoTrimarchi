@@ -11,7 +11,15 @@ package lab.pkg4_vidal_trimarchi;
  */
 public abstract class caballero extends Piezas {
     public boolean Movimiento(int i,int j,int i2,int j2) {
-        return false;
+           boolean bresp=false;
+     if((i==i2&&(j+1==j||j-1==j2))){
+         bresp=true;
+     }else if((j==j2&&(i+1==i2||i-1==i2))){
+        bresp=true; 
+     }else{
+         bresp=false;
+     }
+        return bresp;
         
     }
     
