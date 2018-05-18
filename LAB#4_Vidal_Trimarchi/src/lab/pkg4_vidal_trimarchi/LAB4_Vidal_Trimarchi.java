@@ -103,8 +103,10 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if(((caballero) jug1).Movimiento(posi, posj, posi2, posj2)==true){
-                                        m1=true;
+                                    if (((caballero) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
                                     }
                                 } else if (tablero[posi][posj].equals("d")) {
                                     System.out.println("Ingrese la nueva Posicion i");
@@ -113,7 +115,11 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    ((duendes) jug1).Movimiento(posi, posj, posi2, posj2);
+                                    if (((duendes) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
                                 } else if (tablero[posi][posj].equals("m")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
@@ -121,22 +127,25 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    ((magos) jug1).Movimiento(posi, posj, posi2, posj2);
-                                }else if (tablero[posi][posj].equals("f")) {
+                                    if (((magos) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                } else if (tablero[posi][posj].equals("f")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
                                     validar(posi2);
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    ((Dragon) jug1).Movimiento(posi, posj, posi2, posj2);
+                                    if (((Dragon) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
                                 }
-                                System.out.println("Ingrese la nueva Posicion i");
-                                posi2 = lea.nextInt();
-                                System.out.println("Ingrese la nueva posicion de j");
-                                posj2 = lea.nextInt();
 
-                                esValidoj1(posi, posj, posi2, posj2);
                             } catch (Ex es) {
                                 System.out.println(es.getMessage());
                             }
