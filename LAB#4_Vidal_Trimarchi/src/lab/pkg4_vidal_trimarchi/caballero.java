@@ -10,5 +10,13 @@ package lab.pkg4_vidal_trimarchi;
  * @author X
  */
 public abstract class caballero extends Piezas {
+    public boolean Movimiento(int i,int j,int i2,int j2) {
+        return false;
+        
+    }
+    
+
+    public caballero() {
+    }
     
 }

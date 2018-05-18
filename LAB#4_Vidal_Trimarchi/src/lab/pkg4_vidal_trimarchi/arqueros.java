@@ -11,7 +11,12 @@ package lab.pkg4_vidal_trimarchi;
  */
 public class arqueros extends Piezas{
 
-    @Override
+    public boolean Movimiento(int i,int j,int i2,int j2) {
+         
+        return false;
+        
+    }
+  
     public boolean ataque() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

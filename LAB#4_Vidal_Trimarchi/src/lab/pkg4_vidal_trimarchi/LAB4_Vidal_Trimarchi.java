@@ -94,6 +94,7 @@ public class LAB4_Vidal_Trimarchi {
                                 System.out.println("Ingrese coordenada en j");
                                 posj = lea.nextInt();
                                 validar2(posj);
+                                System.out.println("");
                                 if(tablero[posi][posj].equals("c")){
                                      ((caballero)jug1).ataque();
                                 }else if (tablero[posi][posj].equals("d")){

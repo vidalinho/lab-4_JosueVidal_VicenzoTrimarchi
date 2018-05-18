@@ -49,7 +49,8 @@ public class Piezas {
     
     
     public boolean ataque() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
+        
     }
     
 }

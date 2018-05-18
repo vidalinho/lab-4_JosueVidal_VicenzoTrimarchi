@@ -16,7 +16,7 @@ public class Dragon extends Piezas{
         return false;
         
     }
-     public boolean Movimiento() {
+     public boolean Movimiento(int i,int j,int i2,int j2) {
          
         return false;
         
