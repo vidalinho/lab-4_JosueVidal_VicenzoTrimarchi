@@ -103,7 +103,9 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    ((caballero) jug1).Movimiento(posi, posj, posi2, posj2);
+                                    if(((caballero) jug1).Movimiento(posi, posj, posi2, posj2)==true){
+                                        m1=true;
+                                    }
                                 } else if (tablero[posi][posj].equals("d")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
