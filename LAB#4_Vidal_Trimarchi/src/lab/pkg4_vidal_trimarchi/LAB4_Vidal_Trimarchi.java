@@ -5,6 +5,8 @@
  */
 package lab.pkg4_vidal_trimarchi;
 
+import java.util.Scanner;
+
 /**
  *
  * @author josue
@@ -15,8 +17,28 @@ public class LAB4_Vidal_Trimarchi {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        String hola="";
+
+        Scanner lea = new Scanner(System.in);
+        int opc = 0;
+        while (opc < 5) {
+            System.out.println("    ---MENU---");
+            System.out.println("1) Agregar jugador");
+            System.out.println("2) Eliminar jugador");
+            System.out.println("3) Listar jugadores");
+            System.out.println("4) Jugar");
+            System.out.println("5) Salir");
+            opc = lea.nextInt();
+            switch (opc) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
+        }
     }
-    
+
 }
