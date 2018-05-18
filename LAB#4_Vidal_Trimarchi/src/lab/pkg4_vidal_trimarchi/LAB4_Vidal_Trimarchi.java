@@ -6,6 +6,7 @@
 package lab.pkg4_vidal_trimarchi;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,6 +20,7 @@ public class LAB4_Vidal_Trimarchi {
     public static void main(String[] args) {
 
         Scanner lea = new Scanner(System.in);
+        ArrayList jugadores = new ArrayList();
         int opc = 0;
         while (opc < 5) {
             System.out.println("    ---MENU---");
@@ -30,10 +32,35 @@ public class LAB4_Vidal_Trimarchi {
             opc = lea.nextInt();
             switch (opc) {
                 case 1:
+                    System.out.println("Ingrese nombre: ");
+                    String nombre = lea.next();
+                    System.out.println("Ingrese usuario: ");
+                    String usuario = lea.next();
+                    int puntos = 0;
+                    System.out.println("Ingrese lugar de nacimiento: ");
+                    String lugar = lea.next();
+                    System.out.println("Ingrese edad: ");
+                    int edad = lea.nextInt();
+                    System.out.println("Ingrese sexo[F/M]: ");
+                    String sexo = lea.next();
+                    jugadores.add(new Jugador(nombre, usuario, lugar, edad, sexo));
                     break;
                 case 2:
+                    for (Object t : jugadores) {
+                        if (t instanceof Jugador) {
+                            System.out.println(jugadores.indexOf(t) + " " + t);
+                        }
+                    }
+                    System.out.println("ingrese el indice de quien quiere eliminar:");
+                    int eliminar = lea.nextInt();
+                    jugadores.remove(eliminar);
                     break;
                 case 3:
+                    for (Object t : jugadores) {
+                        if (t instanceof Jugador) {
+                            System.out.println(jugadores.indexOf(t) + " " + t);
+                        }
+                    }
                     break;
                 case 4:
                     break;
