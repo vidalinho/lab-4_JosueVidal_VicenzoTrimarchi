@@ -67,7 +67,7 @@ public class LAB4_Vidal_Trimarchi {
                     }
                     break;
                 case 4:
-                    Tablero m = new Tablero();                    
+                    Tablero m = new Tablero();
                     tablero = m.getTablero();
                     int j1 = 0;
                     boolean m1 = false;
@@ -77,12 +77,12 @@ public class LAB4_Vidal_Trimarchi {
                      posj;
                     int posi2,
                      posj2;
-                    Piezas jug1=new Piezas("Blancas","Cobre");
-                    Piezas jug2=new Piezas("Negras","Plata");
+                    Piezas jug1 = new Piezas("Blancas", "Cobre");
+                    Piezas jug2 = new Piezas("Negras", "Plata");
 
                     do {
                         do {
-                            
+
                             System.out.println("**********************");
                             int cont = 0;
                             try {
@@ -95,12 +95,40 @@ public class LAB4_Vidal_Trimarchi {
                                 posj = lea.nextInt();
                                 validar2(posj);
                                 System.out.println("");
-                                if(tablero[posi][posj].equals("c")){
-                                     ((caballero)jug1).ataque();
-                                }else if (tablero[posi][posj].equals("d")){
-                                     ((Dragon)jug1).ataque();
+
+                                if (tablero[posi][posj].equals("c")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    ((caballero) jug1).Movimiento(posi, posj, posi2, posj2);
+                                } else if (tablero[posi][posj].equals("d")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    ((duendes) jug1).Movimiento(posi, posj, posi2, posj2);
+                                } else if (tablero[posi][posj].equals("m")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    ((magos) jug1).Movimiento(posi, posj, posi2, posj2);
+                                }else if (tablero[posi][posj].equals("f")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    ((Dragon) jug1).Movimiento(posi, posj, posi2, posj2);
                                 }
-                               
                                 System.out.println("Ingrese la nueva Posicion i");
                                 posi2 = lea.nextInt();
                                 System.out.println("Ingrese la nueva posicion de j");
@@ -143,15 +171,14 @@ public class LAB4_Vidal_Trimarchi {
 
     public static boolean esValidoj1(int posi, int posj, int posi2, int posj2) {
         boolean bresp = false;
-    
+
         return bresp;
 
     }
 
     public static boolean esValidoj2(int posi, int posj, int posi2, int posj2) {
         boolean bresp = false;
-        
-        
+
         return bresp;
 
     }
