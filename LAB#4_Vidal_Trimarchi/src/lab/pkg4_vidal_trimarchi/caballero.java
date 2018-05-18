@@ -9,6 +9,6 @@ package lab.pkg4_vidal_trimarchi;
  *
  * @author X
  */
-public class caballero extends Piezas {
+public abstract class caballero extends Piezas {
     
 }

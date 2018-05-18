@@ -16,12 +16,12 @@ import java.util.StringTokenizer;
  */
 public class LAB4_Vidal_Trimarchi {
 
+    static String[][] tablero = null;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
-        String[][] tablero = null;
 
         Scanner lea = new Scanner(System.in);
         ArrayList jugadores = new ArrayList();
@@ -68,7 +68,8 @@ public class LAB4_Vidal_Trimarchi {
                     break;
                 case 4:
                     Tablero m = new Tablero();
-
+                    String jug1="Blanco";
+                    
                     tablero = m.getTablero();
                     int j1 = 0;
                     boolean m1 = false;
@@ -76,19 +77,30 @@ public class LAB4_Vidal_Trimarchi {
                     int j2 = 0;
                     int posi,
                      posj;
+                    int posi2,
+                     posj2;
 
                     do {
                         do {
+                            System.out.println("**********************");
                             int cont = 0;
                             try {
                                 Imprime(tablero);
 
                                 System.out.println("Ingrese coordenada en i");
                                 posi = lea.nextInt();
+                                validar(posi);
                                 System.out.println("Ingrese coordenada en j");
                                 posj = lea.nextInt();
-                            } catch (Exception e) {
+                                validar2(posj);
+                                System.out.println("Ingrese la nueva Posicion i");
+                                posi2 = lea.nextInt();
+                                System.out.println("Ingrese la nueva posicion de j");
+                                posj2 = lea.nextInt();
 
+                                esValidoj1(posi, posj, posi2, posj2);
+                            } catch (Ex es) {
+                                System.out.println(es.getMessage());
                             }
                         } while (m1 == false);
 
@@ -111,14 +123,28 @@ public class LAB4_Vidal_Trimarchi {
 
     static void validar(int i) throws Ex {
         if (i < 0 || i > 10) {
-            throw new Ex(Color.YELLOW, "Error,tiene que estar entre 0 y 9");
+            throw new Ex(Color.YELLOW, "Error 'I',tiene que estar entre 0 y 9");
         }
     }
 
     static void validar2(int j) throws Ex {
         if (j < 0 || j > 10) {
-            throw new Ex(Color.YELLOW, "Error,tiene que estar entre 0 y 9");
+            throw new Ex(Color.YELLOW, "Error 'J',tiene que estar entre 0 y 9");
         }
     }
 
+    public static boolean esValidoj1(int posi, int posj, int posi2, int posj2) {
+        boolean bresp = false;
+    
+        return bresp;
+
+    }
+
+    public static boolean esValidoj2(int posi, int posj, int posi2, int posj2) {
+        boolean bresp = false;
+        
+        
+        return bresp;
+
+    }
 }

@@ -9,13 +9,12 @@ package lab.pkg4_vidal_trimarchi;
  *
  * @author X
  */
-public class Piezas implements ataques{
-    int movimiento;
+public abstract class Piezas implements ataques{
     String Color;
     String material;
 
-    public Piezas(int movimiento, String Color, String material) {
-        this.movimiento = movimiento;
+    public Piezas(String Color, String material) {
+      
         this.Color = Color;
         this.material = material;
     }
@@ -37,24 +36,14 @@ public class Piezas implements ataques{
     }
     
 
-    public Piezas(int movimiento) {
-        this.movimiento = movimiento;
-    }
 
     public Piezas() {
     }
 
-    public int getMovimiento() {
-        return movimiento;
-    }
-
-    public void setMovimiento(int movimiento) {
-        this.movimiento = movimiento;
-    }
 
     @Override
     public String toString() {
-        return "Piezas{" + "movimiento=" + movimiento + ", Color=" + Color + ", material=" + material + '}';
+        return "Piezas{"+ ", Color=" + Color + ", material=" + material + '}';
     }
     
     
