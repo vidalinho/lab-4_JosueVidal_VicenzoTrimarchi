@@ -9,6 +9,6 @@ package lab.pkg4_vidal_trimarchi;
  *
  * @author X
  */
-public class duendes {
+public class duendes extends Piezas{
     
 }

@@ -9,6 +9,7 @@ package lab.pkg4_vidal_trimarchi;
  *
  * @author X
  */
-public class magos {
+public class magos extends Piezas {
+    
     
 }

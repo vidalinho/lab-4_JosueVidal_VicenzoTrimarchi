@@ -10,5 +10,5 @@ package lab.pkg4_vidal_trimarchi;
  * @author X
  */
 public interface ataques {
-    
+   public boolean ataque(); 
 }

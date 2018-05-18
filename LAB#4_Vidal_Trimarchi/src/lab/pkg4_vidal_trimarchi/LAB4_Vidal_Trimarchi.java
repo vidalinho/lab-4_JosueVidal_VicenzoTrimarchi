@@ -81,8 +81,7 @@ public class LAB4_Vidal_Trimarchi {
                             int cont = 0;
                             try {
                                 Imprime(tablero);
-                                System.out.println("Escoja su Posicion I,J");
-                                String pos = lea.next();
+
                                 System.out.println("Ingrese coordenada en i");
                                 posi = lea.nextInt();
                                 System.out.println("Ingrese coordenada en j");
