@@ -17,7 +17,7 @@ public class LAB4_Vidal_Trimarchi {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        String [][]tablero= new String[11][11];
         Scanner lea = new Scanner(System.in);
         int opc = 0;
         while (opc < 5) {
@@ -36,6 +36,8 @@ public class LAB4_Vidal_Trimarchi {
                 case 3:
                     break;
                 case 4:
+                   Tablero m=new Tablero();
+                   
                     break;
             }
         }
