@@ -67,9 +67,7 @@ public class LAB4_Vidal_Trimarchi {
                     }
                     break;
                 case 4:
-                    Tablero m = new Tablero();
-                    String jug1="Blanco";
-                    
+                    Tablero m = new Tablero();                    
                     tablero = m.getTablero();
                     int j1 = 0;
                     boolean m1 = false;
@@ -79,9 +77,12 @@ public class LAB4_Vidal_Trimarchi {
                      posj;
                     int posi2,
                      posj2;
+                    Piezas jug1=new Piezas("Blancas","Cobre");
+                    Piezas jug2=new Piezas("Negras","Plata");
 
                     do {
                         do {
+                            
                             System.out.println("**********************");
                             int cont = 0;
                             try {
@@ -93,6 +94,12 @@ public class LAB4_Vidal_Trimarchi {
                                 System.out.println("Ingrese coordenada en j");
                                 posj = lea.nextInt();
                                 validar2(posj);
+                                if(tablero[posi][posj].equals("c")){
+                                     ((caballero)jug1).ataque();
+                                }else if (tablero[posi][posj].equals("d")){
+                                     ((Dragon)jug1).ataque();
+                                }
+                               
                                 System.out.println("Ingrese la nueva Posicion i");
                                 posi2 = lea.nextInt();
                                 System.out.println("Ingrese la nueva posicion de j");

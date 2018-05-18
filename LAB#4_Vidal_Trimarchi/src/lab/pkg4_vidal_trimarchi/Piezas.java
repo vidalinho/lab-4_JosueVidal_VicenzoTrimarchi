@@ -9,7 +9,7 @@ package lab.pkg4_vidal_trimarchi;
  *
  * @author X
  */
-public abstract class Piezas implements ataques{
+public class Piezas {
     String Color;
     String material;
 
@@ -37,6 +37,7 @@ public abstract class Piezas implements ataques{
     
 
 
+
     public Piezas() {
     }
 
@@ -46,5 +47,9 @@ public abstract class Piezas implements ataques{
         return "Piezas{"+ ", Color=" + Color + ", material=" + material + '}';
     }
     
+    
+    public boolean ataque() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
