@@ -50,65 +50,49 @@ public class magos extends Piezas {
             bresp = true;
         } else if ((i == i2 && (j + 8 == i2 || j - 8 == j2))) {
             bresp = true;
-            
-            
-        } else if (((i+1==i2) && j+1==j2)) {
+
+        } else if (((i + 1 == i2) && j + 1 == j2)) {
             bresp = true;
-        } else if (((i+2==i2) && j+2==j2)) {
+        } else if (((i + 2 == i2) && j + 2 == j2)) {
             bresp = true;
-        } else if (((i+3==i2) && j+3==j2)) {
+        } else if (((i + 3 == i2) && j + 3 == j2)) {
             bresp = true;
+        } else if (((i + 4 == i2) && j + 4 == j2)) {
+            bresp = true;
+        } else if (((i + 5 == i2) && j + 5 == j2)) {
+            bresp = true;
+        } else if (((i + 6 == i2) && j + 6 == j2)) {
+            bresp = true;
+        } else if (((i + 7 == i2) && j + 7 == j2)) {
+            bresp = true;
+        } else if (((i + 8 == i2) && j + 8 == j2)) {
+            bresp = true;
+        } else if (((i - 1 == i2) && j - 1 == j2)) {
+            bresp = true;
+        } else if (((i - 5 == i2) && j - 5 == j2)) {
+            bresp = true;
+        } else if (((i - 6 == i2) && j - 6 == j2)) {
+            bresp = true;
+        } else if (((i - 7 == i2) && j - 7 == j2)) {
+            bresp = true;
+        } else if (((i - 8 == i2) && j - 8 == j2)) {
+            bresp = true;
+        } else if (((i - 2 == i2) && j - 2 == j2)) {
+            bresp = true;
+        } else if (((i - 3 == i2) && j - 3 == j2)) {
+            bresp = true;
+        } else if (((i - 4 == i2) && j - 4 == j2)) {
+            bresp = true;
+        } else {
+            bresp = false;
         }
-         else if (((i+4==i2) && j+4==j2)) {
-            bresp = true;
-        }
-         else if (((i+5==i2) && j+5==j2)) {
-            bresp = true;
-        }
-         else if (((i+6==i2) && j+6==j2)) {
-            bresp = true;
-        }
-         else if (((i+7==i2) && j+7==j2)) {
-            bresp = true;
-        }
-         else if (((i+8==i2) && j+8==j2)) {
-            bresp = true;
-        } else if (((i-1==i2) && j-1==j2)) {
-            bresp = true;
-        }
-         else if (((i-5==i2) && j-5==j2)) {
-            bresp = true;
-        }
-         else if (((i-6==i2) && j-6==j2)) {
-            bresp = true;
-        }
-         else if (((i-7==i2) && j-7==j2)) {
-            bresp = true;
-        }
-         else if (((i-8==i2) && j-8==j2)) {
-            bresp = true;
-        }else if (((i-2==i2) && j-2==j2)) {
-            bresp = true;
-        }
-        else if (((i-3==i2) && j-3==j2)) {
-            bresp = true;
-        }
-        else if (((i-4==i2) && j-4==j2)) {
-            bresp = true;
-        }
-        
-        
-        
-        
 
         return bresp;
 
     }
-}
 
-public boolean ataque() {
+    public boolean ataque() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }

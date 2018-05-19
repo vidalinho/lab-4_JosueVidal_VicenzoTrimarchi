@@ -15,14 +15,19 @@ import java.util.StringTokenizer;
  * @author josue
  */
 public class LAB4_Vidal_Trimarchi {
-
+    
     static String[][] tablero = null;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        duendes ds=new duendes();
+        caballero cb=new caballero();
+        Dragon dr=new Dragon();
+        magos mg=new magos();
+        arqueros ar=new arqueros();
+        
         Scanner lea = new Scanner(System.in);
         ArrayList jugadores = new ArrayList();
         int opc = 0;
@@ -71,7 +76,7 @@ public class LAB4_Vidal_Trimarchi {
                     tablero = m.getTablero();
                     int j1 = 0;
                     boolean m1 = false;
-                    boolean m2 = false;
+                    boolean m2;
                     int j2 = 0;
                     int posi,
                      posj;
@@ -79,15 +84,17 @@ public class LAB4_Vidal_Trimarchi {
                      posj2;
                     Piezas jug1 = new Piezas("Blancas", "Cobre");
                     Piezas jug2 = new Piezas("Negras", "Plata");
-
+                    
+                    
                     do {
                         do {
-
-                            System.out.println("**********************");
+                            m2 = false;
+                            System.out.println("");
+                            System.out.println("***********JUGADOR1***********");
                             int cont = 0;
                             try {
                                 Imprime(tablero);
-
+                                
                                 System.out.println("Ingrese coordenada en i");
                                 posi = lea.nextInt();
                                 validar(posi);
@@ -95,7 +102,7 @@ public class LAB4_Vidal_Trimarchi {
                                 posj = lea.nextInt();
                                 validar2(posj);
                                 System.out.println("");
-
+                                
                                 if (tablero[posi][posj].equals("c")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
@@ -103,7 +110,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (((caballero) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (cb.Movimiento(posi, posj, posi2, posj2) == true) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -115,7 +122,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (((duendes) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (ds.Movimiento(posi, posj, posi2, posj2) == true) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -127,7 +134,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (((magos) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (mg.Movimiento(posi, posj, posi2, posj2) == true) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -139,58 +146,156 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (((Dragon) jug1).Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (dr.Movimiento(posi, posj, posi2, posj2) == true) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
                                     }
+                                }else if (tablero[posi][posj].equals("a")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    if (ar.Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                }else{
+                                    System.out.println("Movimiento Invalido");
                                 }
-
+                                
                             } catch (Ex es) {
                                 System.out.println(es.getMessage());
                             }
                         } while (m1 == false);
-
+                        Imprime(tablero);
+                        do{
+                            m1=false;
+                             System.out.println("");
+                            System.out.println("***********JUGADOR2***********");
+                            int cont = 0;
+                            try {
+                                Imprime(tablero);
+                                
+                                System.out.println("Ingrese coordenada en i");
+                                posi = lea.nextInt();
+                                validar(posi);
+                                System.out.println("Ingrese coordenada en j");
+                                posj = lea.nextInt();
+                                validar2(posj);
+                                System.out.println("");
+                                
+                                if (tablero[posi][posj].equals("C")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    if (cb.Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                } else if (tablero[posi][posj].equals("D")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    if (ds.Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                } else if (tablero[posi][posj].equals("M")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    if (mg.Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                } else if (tablero[posi][posj].equals("F")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    if (dr.Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                }else if (tablero[posi][posj].equals("A")) {
+                                    System.out.println("Ingrese la nueva Posicion i");
+                                    posi2 = lea.nextInt();
+                                    validar(posi2);
+                                    System.out.println("Ingrese la nueva posicion de j");
+                                    posj2 = lea.nextInt();
+                                    validar2(posj2);
+                                    if (ar.Movimiento(posi, posj, posi2, posj2) == true) {
+                                        tablero[posi2][posj2] = tablero[posi][posj];
+                                        tablero[posi][posj] = "*";
+                                        m1 = true;
+                                    }
+                                }else{
+                                    System.out.println("Movimiento Invalido");
+                                }
+                                
+                            } catch (Ex es) {
+                                System.out.println(es.getMessage());
+                            }
+                        }while(m2==false);
                     } while (j1 == 0 && j2 == 0);
-
+                    
                     break;
             }
         }
     }
-
+    
     public static void Imprime(String tablero[][]) {
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
                 System.out.print(tablero[i][j]);
             }
             System.out.println("");
-
+            
         }
     }
-
+    
     static void validar(int i) throws Ex {
         if (i < 0 || i > 10) {
             throw new Ex(Color.YELLOW, "Error 'I',tiene que estar entre 0 y 9");
         }
     }
-
+    
     static void validar2(int j) throws Ex {
         if (j < 0 || j > 10) {
             throw new Ex(Color.YELLOW, "Error 'J',tiene que estar entre 0 y 9");
         }
     }
-
+    
     public static boolean esValidoj1(int posi, int posj, int posi2, int posj2) {
         boolean bresp = false;
-
+        
         return bresp;
-
+        
     }
-
+    
     public static boolean esValidoj2(int posi, int posj, int posi2, int posj2) {
         boolean bresp = false;
-
+        
         return bresp;
-
+        
     }
 }

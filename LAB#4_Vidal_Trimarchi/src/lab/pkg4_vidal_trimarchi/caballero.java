@@ -9,7 +9,7 @@ package lab.pkg4_vidal_trimarchi;
  *
  * @author X
  */
-public abstract class caballero extends Piezas {
+public class caballero extends Piezas {
     public boolean Movimiento(int i,int j,int i2,int j2) {
            boolean bresp=false;
      if((i==i2&&(j+1==j||j-1==j2))){

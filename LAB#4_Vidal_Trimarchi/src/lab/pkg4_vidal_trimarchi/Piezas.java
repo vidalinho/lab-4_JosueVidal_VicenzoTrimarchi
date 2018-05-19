@@ -52,5 +52,9 @@ public class Piezas {
         return false;
         
     }
+     public boolean Movimiento(int i, int j, int i2, int j2) {
+        return false;
+         
+     }
     
 }
