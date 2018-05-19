@@ -121,10 +121,14 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (cb.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
+                                        if(tablero[posi2][posj2].equals("R")){
+                                            j1=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
                                     }
+                                    
                                 } else if (tablero[posi][posj].equals("d")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
@@ -133,6 +137,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (ds.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
+                                       if(tablero[posi2][posj2].equals("R")){
+                                            j1=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -145,6 +152,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (mg.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
+                                     if(tablero[posi2][posj2].equals("R")){
+                                            j1=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -157,6 +167,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (dr.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
+                                       if(tablero[posi2][posj2].equals("R")){
+                                            j1=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -169,6 +182,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (ar.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
+                                      if(tablero[posi2][posj2].equals("R")){
+                                            j1=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -176,7 +192,7 @@ public class LAB4_Vidal_Trimarchi {
                                 } else {
                                     System.out.println("Movimiento Invalido");
                                 }
-
+                               
                             } catch (Ex es) {
                                 System.out.println(es.getMessage());
                             }
@@ -206,9 +222,12 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (cb.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
+                                       if(tablero[posi2][posj2].equals("r")){
+                                            j2=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
-                                        m1 = true;
+                                        m2 = true;
                                     }
                                 } else if (tablero[posi][posj].equals("D")) {
                                     System.out.println("Ingrese la nueva Posicion i");
@@ -218,6 +237,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (ds.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
+                                     if(tablero[posi2][posj2].equals("r")){
+                                            j2=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m2 = true;
@@ -230,6 +252,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (mg.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
+                                       if(tablero[posi2][posj2].equals("r")){
+                                            j2=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m2 = true;
@@ -242,6 +267,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (dr.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
+                                       if(tablero[posi2][posj2].equals("r")){
+                                            j2=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m2 = true;
@@ -254,6 +282,9 @@ public class LAB4_Vidal_Trimarchi {
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
                                     if (ar.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
+                                        if(tablero[posi2][posj2].equals("r")){
+                                            j2=1;
+                                        }
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m2 = true;
@@ -267,6 +298,12 @@ public class LAB4_Vidal_Trimarchi {
                             }
                         } while (m2 == false);
                     } while (j1 == 0 && j2 == 0);
+                    if(j1==1){
+                        System.out.println("GANO EL JUGADOR 1");
+                       
+                    }else{
+                        System.out.println("GANO EL JUGADOR 2");
+                    }
 
                     break;
             }
