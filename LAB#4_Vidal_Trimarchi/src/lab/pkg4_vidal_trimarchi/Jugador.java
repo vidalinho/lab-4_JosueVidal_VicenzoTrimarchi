@@ -20,8 +20,9 @@ public class Jugador {
     public Jugador() {
     }
 
-    public Jugador(String Nombre, String Usuario, String nacimiento, int edad, String sexo) {
+    public Jugador(String Nombre, String Usuario, String nacimiento, int edad, String sexo,int puntos) {
         this.Nombre = Nombre;
+        this.puntos = puntos;
         this.Usuario = Usuario;
         this.nacimiento = nacimiento;
         this.edad = edad;

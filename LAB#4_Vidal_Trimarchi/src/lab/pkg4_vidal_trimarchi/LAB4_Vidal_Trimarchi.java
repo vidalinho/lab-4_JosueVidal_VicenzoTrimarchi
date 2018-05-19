@@ -53,7 +53,7 @@ public class LAB4_Vidal_Trimarchi {
                     int edad = lea.nextInt();
                     System.out.println("Ingrese sexo[F/M]: ");
                     String sexo = lea.next();
-                    jugadores.add(new Jugador(nombre, usuario, lugar, edad, sexo));
+                    jugadores.add(new Jugador(nombre, usuario, lugar, edad, sexo,0));
                     break;
                 case 2:
                     for (Object t : jugadores) {
