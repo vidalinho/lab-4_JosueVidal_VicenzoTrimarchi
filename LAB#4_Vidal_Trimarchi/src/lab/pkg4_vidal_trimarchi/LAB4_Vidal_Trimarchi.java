@@ -15,19 +15,20 @@ import java.util.StringTokenizer;
  * @author josue
  */
 public class LAB4_Vidal_Trimarchi {
-    
+
     static String[][] tablero = null;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        duendes ds=new duendes();
-        caballero cb=new caballero();
-        Dragon dr=new Dragon();
-        magos mg=new magos();
-        arqueros ar=new arqueros();
-        
+        String piezas = "CFARMD";
+        String piezas2 = "cfarmd";
+        duendes ds = new duendes();
+        caballero cb = new caballero();
+        Dragon dr = new Dragon();
+        magos mg = new magos();
+        arqueros ar = new arqueros();
         Scanner lea = new Scanner(System.in);
         ArrayList jugadores = new ArrayList();
         int opc = 0;
@@ -72,6 +73,16 @@ public class LAB4_Vidal_Trimarchi {
                     }
                     break;
                 case 4:
+                     String jm1,jm2;
+                    if(jugadores.size()<2){
+                         jm1="JUGADOR 1";
+                         jm2="JUGADOR 2";
+                    }else{
+                        jm1=jugadores.get(0).toString();
+                        jm2=jugadores.get(0).toString();
+                    }
+                            
+                          
                     Tablero m = new Tablero();
                     tablero = m.getTablero();
                     int j1 = 0;
@@ -84,17 +95,16 @@ public class LAB4_Vidal_Trimarchi {
                      posj2;
                     Piezas jug1 = new Piezas("Blancas", "Cobre");
                     Piezas jug2 = new Piezas("Negras", "Plata");
-                    
-                    
+
                     do {
                         do {
                             m2 = false;
                             System.out.println("");
-                            System.out.println("***********JUGADOR1***********");
+                            System.out.println("***********"+jm1+"***********");
                             int cont = 0;
                             try {
                                 Imprime(tablero);
-                                
+
                                 System.out.println("Ingrese coordenada en i");
                                 posi = lea.nextInt();
                                 validar(posi);
@@ -102,7 +112,7 @@ public class LAB4_Vidal_Trimarchi {
                                 posj = lea.nextInt();
                                 validar2(posj);
                                 System.out.println("");
-                                
+
                                 if (tablero[posi][posj].equals("c")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
@@ -151,7 +161,7 @@ public class LAB4_Vidal_Trimarchi {
                                         tablero[posi][posj] = "*";
                                         m1 = true;
                                     }
-                                }else if (tablero[posi][posj].equals("a")) {
+                                } else if (tablero[posi][posj].equals("a")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
                                     validar(posi2);
@@ -163,23 +173,23 @@ public class LAB4_Vidal_Trimarchi {
                                         tablero[posi][posj] = "*";
                                         m1 = true;
                                     }
-                                }else{
+                                } else {
                                     System.out.println("Movimiento Invalido");
                                 }
-                                
+
                             } catch (Ex es) {
                                 System.out.println(es.getMessage());
                             }
                         } while (m1 == false);
                         Imprime(tablero);
-                        do{
-                            m1=false;
-                             System.out.println("");
-                            System.out.println("***********JUGADOR2***********");
+                        do {
+                            m1 = false;
+                            System.out.println("");
+                            System.out.println("***********"+jm2+"***********");
                             int cont = 0;
                             try {
                                 Imprime(tablero);
-                                
+
                                 System.out.println("Ingrese coordenada en i");
                                 posi = lea.nextInt();
                                 validar(posi);
@@ -187,7 +197,7 @@ public class LAB4_Vidal_Trimarchi {
                                 posj = lea.nextInt();
                                 validar2(posj);
                                 System.out.println("");
-                                
+
                                 if (tablero[posi][posj].equals("C")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
@@ -236,7 +246,7 @@ public class LAB4_Vidal_Trimarchi {
                                         tablero[posi][posj] = "*";
                                         m2 = true;
                                     }
-                                }else if (tablero[posi][posj].equals("A")) {
+                                } else if (tablero[posi][posj].equals("A")) {
                                     System.out.println("Ingrese la nueva Posicion i");
                                     posi2 = lea.nextInt();
                                     validar(posi2);
@@ -248,54 +258,54 @@ public class LAB4_Vidal_Trimarchi {
                                         tablero[posi][posj] = "*";
                                         m2 = true;
                                     }
-                                }else{
+                                } else {
                                     System.out.println("Movimiento Invalido");
                                 }
-                                
+
                             } catch (Ex es) {
                                 System.out.println(es.getMessage());
                             }
-                        }while(m2==false);
+                        } while (m2 == false);
                     } while (j1 == 0 && j2 == 0);
-                    
+
                     break;
             }
         }
     }
-    
+
     public static void Imprime(String tablero[][]) {
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
                 System.out.print(tablero[i][j]);
             }
             System.out.println("");
-            
+
         }
     }
-    
+
     static void validar(int i) throws Ex {
         if (i < 0 || i > 10) {
             throw new Ex(Color.YELLOW, "Error 'I',tiene que estar entre 0 y 9");
         }
     }
-    
+
     static void validar2(int j) throws Ex {
         if (j < 0 || j > 10) {
             throw new Ex(Color.YELLOW, "Error 'J',tiene que estar entre 0 y 9");
         }
     }
-    
+
     public static boolean esValidoj1(int posi, int posj, int posi2, int posj2) {
         boolean bresp = false;
-        
+
         return bresp;
-        
+
     }
-    
+
     public static boolean esValidoj2(int posi, int posj, int posi2, int posj2) {
         boolean bresp = false;
-        
+
         return bresp;
-        
+
     }
 }
