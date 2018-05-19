@@ -110,7 +110,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (cb.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (cb.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -122,7 +122,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (ds.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (ds.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -134,7 +134,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (mg.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (mg.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -146,7 +146,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (dr.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (dr.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -158,7 +158,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (ar.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (ar.Movimiento(posi, posj, posi2, posj2) == true&&!("adrfmc").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -195,7 +195,7 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (cb.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (cb.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
                                         m1 = true;
@@ -207,10 +207,10 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (ds.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (ds.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
-                                        m1 = true;
+                                        m2 = true;
                                     }
                                 } else if (tablero[posi][posj].equals("M")) {
                                     System.out.println("Ingrese la nueva Posicion i");
@@ -219,10 +219,10 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (mg.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (mg.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
-                                        m1 = true;
+                                        m2 = true;
                                     }
                                 } else if (tablero[posi][posj].equals("F")) {
                                     System.out.println("Ingrese la nueva Posicion i");
@@ -231,10 +231,10 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (dr.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (dr.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
-                                        m1 = true;
+                                        m2 = true;
                                     }
                                 }else if (tablero[posi][posj].equals("A")) {
                                     System.out.println("Ingrese la nueva Posicion i");
@@ -243,10 +243,10 @@ public class LAB4_Vidal_Trimarchi {
                                     System.out.println("Ingrese la nueva posicion de j");
                                     posj2 = lea.nextInt();
                                     validar2(posj2);
-                                    if (ar.Movimiento(posi, posj, posi2, posj2) == true) {
+                                    if (ar.Movimiento(posi, posj, posi2, posj2) == true&&!("ADRFMC").contains(tablero[posi2][posj2])) {
                                         tablero[posi2][posj2] = tablero[posi][posj];
                                         tablero[posi][posj] = "*";
-                                        m1 = true;
+                                        m2 = true;
                                     }
                                 }else{
                                     System.out.println("Movimiento Invalido");
